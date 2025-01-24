@@ -1,16 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News || page</title>
+    <link rel="shortcut icon" href="assets/favicon-32x32.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        GrayishBlue: "hsl(233, 8%, 79%)",
+                        softRed: "hsl(5, 85%, 63%)",
+                        softOrange: "hsl(35, 77%, 62%)",
+                        offwhite: "hsl(36, 100%, 99%)",
+                        darkGrayishBlue: "hsl(236, 13%, 42%)",
+                        veryDarkBlue: "hsl(240, 100%, 5%)",
+                    },
+                    fontFamily: {
+                        Inter: ['"Inter", serif']
+                    }
+                },
+            },
+        }
+    </script>
 </head>
-<body>
+
+<body class="font-Inter">
     <!-- nav bar -->
-     <nav>
+    <nav class="container mx-auto pb-[10px] pt-[50px] lg-py-[58px] lg:px-[140px] flex justify-between item-center">
+
+        <!-- nav-logo -->
         <div>
             <img src="assets/logo.svg" alt="">
         </div>
-     </nav>
+
+        <!-- nav-items -->
+        <ul class="hidden lg:flex gap-12 font-[400] text-darkGrayishBlue">
+            <li class="hover:text-softRed cursor-pointer">Home</li>
+            <li class="hover:text-softRed cursor-pointer">New</li>
+            <li class="hover:text-softRed cursor-pointer">Popular</li>
+            <li class="hover:text-softRed cursor-pointer">Trending</li>
+            <li class="hover:text-softRed cursor-pointer">Categories</li>
+        </ul>
+
+        <!-- menu-img -->
+        <div class="md:hidden">
+            <img src="assets/icon-menu.svg" alt="menu-icon">
+        </div>
+    </nav>
+
+    <!-- main -->
+    <main class="container mx-auto pb-[20px] pt-[50px] lg-py-[58px] md:px-[140px]">
+        <!-- main-section -->
+        <section class="lg:grid grid-cols-3 gap-12">
+            <!-- section-1 -->
+            <section class="col-span-2">
+                <!-- div-1 -->
+                <div>
+                    <img src="assets/image-web-3-desktop.jpg" alt="web-3" class="hidden lg:block">
+                    <img src="assets/image-web-3-mobile.jpg" alt="web-3-mobile" class="lg:hidden">
+                </div>
+                <!-- div-2 -->
+                <div class="lg:grid grid-cols-2">
+                    <h1 class="font-[800] text-[36px] md:text-[50px]">The Bright Future of Web 3.0?</h1>
+
+                    <div>
+                        <p>We dive into the next evolution of web that claims to put the power of the platforms back into
+                            the hands of the people. But is it really fulfilling its promise?</p>
+                            <button>READ NOW</button>
+                    </div>
+                </div>
+            </section>
+            <!-- section-2 -->
+            <section>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam harum illo cum, voluptates eveniet error dicta non distinctio quis delectus nostrum voluptas dignissimos itaque fuga beatae dolorem? Deserunt quisquam saepe inventore commodi expedita numquam animi, earum iusto cumque dolorem ducimus facere, debitis maxime. Molestias alias iure delectus est omnis temporibus.</p>
+            </section>
+        </section>
+    </main>
 </body>
+
 </html>
